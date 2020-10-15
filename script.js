@@ -30,6 +30,8 @@ function runTimer() {
   timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
 }
 
+//calculate WPM but it can never go negative
+//uses 'keypress' so that backspace isn't included in calculations
 function calcWPM() {
   let minutes = timer[0] + (timer[1]/60) + ((timer[2]/60)/100)
   let currentWPM;
